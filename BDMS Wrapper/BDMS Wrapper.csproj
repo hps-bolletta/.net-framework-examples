@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{172D5965-0C38-459F-BDD9-69F17897357E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BDMS_Wrapper</RootNamespace>
+    <AssemblyName>BDMS Wrapper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connected Services\HeartlandServiceReference\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Heartland.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.AddAccountToPreAuthorizedPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.CancelRefundResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.CheckBollettaStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.CloseCurrentCardBatchResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.CreatePaymentPlanResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.CreateRecurringPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.DisburseFundsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.EmailPaymentPlanContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.EndOfDayReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetACHReturnsByDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetBillImageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetBillsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetBillsSummaryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetConvenienceFeeDescriptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetConvenienceFeeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetIVRAuthorizationRecordingResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetPaymentPlanContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetReceiptResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetRecurringPaymentContractResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetRequiredFieldsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetReversalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetSecurePayBillDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetSignatureByTransactionIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetSignOnTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetTokenFromPAXResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetTokenInformationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.GetTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.LoadSecurePayBillDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.LoadSecurePayIVRDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.MakePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.MakePaymentReturnTokenResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.PreAuthorizePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.RemovePreAuthorizedAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.ReversePaymentByOrderIDResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.ReversePaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.ReversePaymentWithReversalTypeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.SetupFutureDatedDisbursementResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.SetupFutureDatedPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BDMS_Wrapper.HeartlandServiceReference.VoidPreAuthorizedTransactionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\HeartlandServiceReference\BillingDataManagementService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\HeartlandServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HeartlandServiceReference\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HeartlandServiceReference\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\HeartlandServiceReference\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
